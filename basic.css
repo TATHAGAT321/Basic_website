@@ -24,11 +24,11 @@ nav.header {
   }
   .carousel{
     margin-top:10px;  
-    height:768px;  
+    height:500px;  
   }
   .carousel-inner > .carousel-item > img{
      width:100%;
-     height:768px;
+     height:500px;
 
   }
   .carousel-indicators{
