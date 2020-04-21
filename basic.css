@@ -1,6 +1,8 @@
 .html,.body{
    height:100%;
    width:100%;
+    color: #4c4c4c;
+    background-color: #f8f9fb;
 }
 
 nav.header {
@@ -23,14 +25,26 @@ nav.header {
     border-color: black;
   }
   .carousel{
-    margin-top:10px;  
-    height:500px;  
+    height:360px;
   }
   .carousel-inner > .carousel-item > img{
      width:100%;
-     height:500px;
-
+     height:360px;
   }
+
+  .carousel-item {
+      position: relative;
+  }
+
+  .black-layer {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top:0;
+      left:0;
+      background-color: rgba(21, 21, 20, 0.25);
+  }
+
   .carousel-indicators{
     margin-bottom: 50px;
     height:30px;
@@ -74,36 +88,26 @@ nav.header {
     background-color: blue;
   }
 .carousel-control{
-  height:100px;
-  margin-top:250px;
-  margin-bottom: 250px;
+  /*height:100px;*/
+  /*margin-top:250px;*/
+  /*margin-bottom: 250px;*/
 } 
 /*#icon1 .carousel-control-prev-icon {
    padding:10px 20px 10px 0px;
 }*/
-.carousel-control #icon1{
-  background-color: gray;
-  height:60px;
-  width:80px;
+.carousel-control #icon1, .carousel-control #icon2{
+  height:40px;
 }
-.carousel-control #icon2{
-  background-color: gray;
-  height:60px;
-  width:80px;
-}
-#icon1:hover{
-    background-color: rgb(0,255,255);
-}
-#icon2:hover{
-  background-color: rgb(0,255,255);
-}
+
+
+
 .layer2{
-  background-color: #ECF0F1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: #fff;
+  /*background-size: cover;*/
+  /*background-repeat: no-repeat;*/
+  /*background-position: center;*/
   /*height:400px;*/
-  margin-top: 0px;
+  /*margin-top: 0px;*/
 }
 .layer2 > .container{
   height:100%; 
@@ -113,43 +117,96 @@ nav.header {
   padding-top:50px;
 } 
 .why-data {
-  background: url(water1.jpg);
+    position: relative;
    background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
+
+
 .icon-box-circle{
-  background-image:url(image1.png);
   /*background-color: red;*/
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height:250px;
-  width:300px;
-  margin-bottom:20px;
-  /*margin-top: 0px;
-  margin-left: 0px;*/
-  /*border-radius: 100px;*/
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:250px;
+    width: 250px;
+    box-shadow: 0 42px 33px -27px rgba(195,205,214,0.8);
+    border: 6px solid #e2e9ef;
+    margin: 20px;
+    border-radius: 7px;
+    background-color: #fff
 }
+
+.process-step-arrow:after {
+    content: '';
+    height: 3px;
+    background: #bcc8d2;
+    width: 85px;
+    position: absolute;
+    right: -42px;
+    top: 50%;
+}
+
+.process-step-arrow:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    border-style: solid;
+    border-width: 10px 0 7px 20px;
+    border-color: transparent transparent transparent #bcc8d2;
+    right: -45px;
+    transform: translateY(-50%);
+}
+
+.icon-box-circle:hover {
+    transform: scale(1.1);
+    transition: .5s;
+    box-shadow: 0 2px 20px 0 #ccd2d8;
+}
+
 .icon-box-content{
-  background: rgb(0,0,0,0);
-  height: 200px;
-  padding-top: 32px;
-  margin-left: 65px;
-  margin-right: 65px;  
+    position: relative;
 }
-.icon-box-content h5{
-  color: rgb(100,40,20,1);
-  font-weight: bold;
-  text-decoration: underline;
+.icon-box-content .sec-process-title{
+    padding: 10px 12px;
+    color: white;
+    background-color: #bcc8d2;
+    position: sticky;
+    max-height: 70px;
+    font-size: 15px;
 }
-.icon-box-content p{
-  font-weight: bold;
-  color:rgb(40,25,100,1);
+
+.icon-box-content .sec-process-title span.badge {
+    background-color: white;
+    color: #7c8892;
+    height: 24px;
+    width: 24px;
+    border-radius: 14px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-right: 2px;
 }
-.section-heading{
-  color:rgba(40,80,150);
-  /*text-decoration: underline*/
+
+.icon-box-content .sec-process-body{
+    font-size: 14px;
+    text-align: left !important;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 180px;
+}
+
+.section-heading {
+    margin : 20px auto;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Helvetica Neue";
 }
 .layer4 .card{
      height:300px;
@@ -174,6 +231,14 @@ nav.header {
 }
 .layer5{
 
+}
+
+.mar-t-50 {
+    margin-top: 50px;
+}
+
+.mar-b-50 {
+    margin-bottom: 50px;
 }
 
 
