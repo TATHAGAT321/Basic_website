@@ -6,12 +6,15 @@
 }
 
 nav.header {
-  	/*background: white;*/
+  	background:white;
   	color: black;
   	box-shadow:0px 2px 5px 0px rgba(0,0,0,.09);
     position: sticky ;
-    top: 0px;
+    top: 0px;  
 
+  }
+  .nav-link{
+    color:black;
   }
 
   .navbar-brand .logo-image {
@@ -19,13 +22,56 @@ nav.header {
   	height: 50px;
   	vertical-align: middle;
   	margin-left: 10px;
+    opacity: 1;
+    animation:example 6s 2s infinite;
   }
-  .navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    border-color: black;
+  @keyframes example{
+    from{width:0%;}
+    to{left:100%;}
   }
   .carousel{
     height:360px;
+  }
+  .carousel-caption{
+     left:-60% !important;
+     right:65%!important;
+     height:150px !important;
+    vertical-align: center !important;
+  }
+  .carousel-caption h2{
+     width:400px;
+   /*  font-weight: bold;*/
+     position: relative;
+     animation: mymove 5s infinite;
+     background-color: rgba(0,80,100,0.8);
+     font-family: 'Abril Fatface', cursive;
+     color: aqua;
+     border: 2px solid white;
+  }
+  .carousel-caption h5{
+     width:300px;
+     font-weight: bold;
+     position: relative;
+     animation: mymove 5s infinite;
+     background-color: rgba(0,0,100,0.2);
+     font-family: serif;
+     border:2px solid black;
+    /* box-shadow: 0px 2px 5px 0px;*/
+      
+  }
+  #h3{
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+    text-align:center;
+    color:black;
+  }
+  #h1{
+    animation-timing-function: ease-in;
+    
+  }
+  @keyframes mymove{
+    from{left:0%;}
+    to{left:100%;}
   }
   .carousel-inner > .carousel-item > img{
      width:100%;
@@ -47,55 +93,58 @@ nav.header {
   .carousel-indicators{
     margin-bottom: 50px;
     height:30px;
+    color:grey;
   }
   .carousel-indicators #one {
    /*margin:5px 5px 5px 5px;*/
-   height: 10px;
-   width: 10px;
+   height: 12px;
+   width: 12px;
    border-radius: 100%;
   
 }
 .carousel-indicators #two {
    /*margin:5px 5px 5px 5px;*/
-   height: 10px;
-   width: 10px;
+   height: 12px;
+   width: 12px;
    border-radius: 100%;
   
 }
 .carousel-indicators #three {
    /*margin:5px 5px 5px 5px;*/
-   height: 10px;
-   width: 10px;
+   height: 12px;
+   width: 12px;
    border-radius: 100%;
   
 }
 .carousel-indicators #four {
    /*margin:5px 5px 5px 5px;*/
-   height: 10px;
-   width: 10px;
+   height: 12px;
+   width: 12px;
    border-radius: 100%;
   
 }
 .carousel-indicators #five {
    /*margin:5px 5px 5px 5px;*/
-   height: 10px;
-   width: 10px;
+   height: 12px;
+   width: 12px;
    border-radius: 100%;
   
 }
 .carousel-indicators .active{
-    background-color: blue;
+    /*background-color: rgb(50,100,200);*/
   }
 .carousel-control{
-  height:100px;
-  margin-top:250px;
-  margin-bottom: 250px;
+  width:64px !important;
+  height:64px !important;
+  margin:190px 5px;
+  background-color:black;
+  opacity:0.4 !important;
+  border-radius: 32px;
 } 
-/*#icon1 .carousel-control-prev-icon {
-   padding:10px 20px 10px 0px;
-}*/
+
 .carousel-control #icon1, .carousel-control #icon2{
   height:40px;
+  
 }
 
 
@@ -364,5 +413,3 @@ nav.header {
 .mar-b-50 {
     margin-bottom: 50px;
 }
-
-
