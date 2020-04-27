@@ -494,3 +494,75 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
     margin-top: 25px;
 }
 
+.section-process {
+    background-color: #ffffff;
+}
+
+.section-process .card-lists {
+    margin-top: 30px;
+    padding: 25px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.section-process .card-desc {
+    background: #FFFFFF;
+    height: 250px;
+    padding: 20px 10px;
+}
+
+.section-process .card-main:hover {
+    box-shadow: 0 0 38px rgba(0,0,0,.15);
+    transition: all 0.3s ease;
+}
+
+.section-process .card-desc:hover {
+    border: 1px solid #327ad2
+}
+
+.section-process .process-step{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #327ad2;
+    text-align: center;
+    top: 1%;
+    border-radius: 50%;
+    left: 41%;
+    z-index: 999;
+    font-size: 17px;
+    margin-top: 0px;
+    padding-top: 4%;
+    color: white;
+}
+
+.section-process .card-desc-title {
+    color: #327ad2;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.section-process .card-desc-text {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: left;
+    height: 165px;
+    overflow-y: auto;
+}
+
+.section-process .card-contact {
+    background-color: #327ad2;
+    color: white;
+}
+
+.section-process .card-contact .card-desc-title {
+    color: #94f9d7;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+.section-process .card-contact .card-desc-text {
+    font-size: 19px;
+}
