@@ -741,12 +741,6 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
 
 /*col md*/
 
-@media (min-width: 300px) {
-    .card-contact {
-        display: none;
-    }
-}
-
 /*col md*/
 @media (min-width: 768px) {
     .card-contact {
