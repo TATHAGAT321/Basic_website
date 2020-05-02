@@ -244,6 +244,7 @@ display: none;
     text-transform: uppercase;
     font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1em;
+    margin-bottom: 10px;
 }
 
 .icon-box-circle:hover {
@@ -343,6 +344,26 @@ display: none;
 
 .price-plan {
     margin-top: 50px;
+    position: relative;
+}
+
+.price-plan .offer {
+    position: absolute;
+    top:0;
+    right:0;
+    background-image: linear-gradient(90deg, #073aae, #2c6ada);
+    color: white;
+    padding: 4px 10px;
+    text-transform: capitalize;
+    z-index: 99;
+    font-size: 13px;
+}
+
+/*linear-gradient(90deg, #da2626fa, #ff0000)*/
+
+.price-plan .offer .condition {
+    font-size: 11px;
+    font-style: italic;
 }
 
 .price-plan .card{
@@ -367,6 +388,17 @@ display: none;
     font-size: 24px;
     font-weight: 500;
     color: #1f1b28;
+}
+
+.layer4 .section-title:after {
+    position: absolute;
+    bottom: -20px;
+    left: 48%;
+    width: 60px;
+    height: 3px;
+    background-color: #BDBDBD;
+    content: '';
+    text-align: center;
 }
 
 .card .price-text {
@@ -455,6 +487,10 @@ ul.price-points li i {
     transform: scale(1.02);
     transition-duration: 0.2s;
     transition-delay: 0.1s;
+}
+
+.layer4 .card:hover .offer {
+    background-color: red;
 }
 
 .layer5 th,td,tr{
