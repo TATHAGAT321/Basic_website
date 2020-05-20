@@ -313,6 +313,7 @@ display: none;
   box-shadow: 0px 3px 7.5px 0px;
   border-radius:5px;
   margin-top: 10px;
+  height:300px;
 }
 .price h5{
   color:#00AEEF;
@@ -344,29 +345,94 @@ display: none;
   background-color:grey;
   border-color: grey;
 }
-.layer5 th,td,tr{
-   border:5px solid white !important;
+/*.layer5 th,td,tr{
+   /*border:1px solid black !important;
 }
-.layer5 table{
-   border:7px solid;
-   border-color:yellow  lightgreen lightgreen  yellow ;
-   background-color: yellow;
+.layer5 table{ 
+   /*border:2px solid black;  
 }
 .layer5 td{
-  background-color: lightblue;
+   font-family: fantasy;
+   width:27%;
+}
+
+.layer5 th{
+   font-family:fantasy;
+   text-transform: uppercase;
+   width:20%;
+}*/
+/*.layer5 th:hover{
+  background-color: #dedede;
+}*/
+/*.layer5 table{
+  background-color: pink;
+}*/
+/*.layer5 .tableparts{
+  display: flex;
+  /*justify-content:
+}
+.layer5 .table1{
+  margin-left: auto;
+  margin-right: 0px;
+  width:60%;
+  padding: 10% 0% 7% 0%;
+  /*width:80%;*/
+  /*padding-top: 10% 10% 10% 10%;
+}
+.layer5 .table2{
+  margin-left: 0px;
+  margin-right:auto;
+  padding: 10% 0% 7% 0%;
+  width: 30%; 
+}*/
+/*.layer5 .column{
+  float: left;
+  width:33.33%;
+}
+.layer5 .row{
+  padding: 0px 50px 0px 50px;
+}
+.layer5 .row:after{
+  content: "" !important;
+  display: table !important;
+  clear: both !important;
+}
+*/
+.layer5 .odd{
+  background-color: rgba(50,122,210,0.8);
+}
+.layer5 .even{
+   background-color: white;
+} 
+.layer5 th,td{
+   width:20%;   
 }
 .layer5 th{
-  background-color: pink;
+  /*border:1px solid rgba(50,122,210,1);*/
+  color : rgba(50,122,210,1);
+  text-transform: uppercase;
 }
-.layer5 hr{
-  width:100px;
-  margin-top:20px;
-  margin-bottom: 50px;
-  height:2px;
-  background-color:grey;
-  border-color: grey;
+.layer5 table{
+  border: 2px solid rgba(50,122,210,1)!important;
+  margin-top: 50px !important;
 }
-#layer{
+
+
+ th.even{
+  background-color: white !important;
+}
+ th.odd{
+  background-color: white !important;
+}
+.layer5 .table-title{
+  display:flex;
+}
+th.heading img{
+  height:300px;
+  width:100%;
+  border:2px solid rgba(50,122,210,0.8);
+}
+/*/*#layer{
   position:relative;
   margin-top:32px; 
   height: auto;
@@ -389,7 +455,7 @@ display: none;
 }
 #block1{
    /*height:300px;*/
-   padding-bottom:50px;
+/*   padding-bottom:50px;
 }
 .title img{
   width:300px;
@@ -437,10 +503,10 @@ display: none;
     margin-right: -5px;
     border:2px solid rgb(82,120,77);
     background-color: #1a3c34;
-    /*border-right: 2px;*/
+    /*border-right: 2px;*//*/
     color: white;
-}
-::placeholder{
+}*/
+/*::placeholder{
    color:white;
    padding-left: 20px;
   }
@@ -456,9 +522,9 @@ display: none;
    padding-left:100px;
    padding-top: 10px;
    color:white;
-}
+}*/
 
-.part2{
+/*.part2{
   margin:20px 20px 20px 0px;
   height:50px;
 }
@@ -495,7 +561,7 @@ display: none;
   display:inline-block;
   list-style:none;
   padding-right:10px;
-}
+}*/
 
 .mar-t-50 {
     margin-top: 50px;
@@ -514,7 +580,7 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
 }
 
 .card-main:hover {
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15)
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
 }
 
 .card-desc {
@@ -645,3 +711,160 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
         display: none;
     }
 }
+ .layer6{
+   margin-top: 30px;
+   padding:50px;
+   background-color:rgb(50,122,210,0.8);
+
+ }
+ .col1 img{
+    height: 100px;
+    width: 220px;
+ }
+ .col1 .flexpart1{
+    margin-top: 20px;
+    margin-left: -40px;
+    display :grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    color:black;
+    list-style: none;
+    font-family: serif;
+    font-size: 20px;
+
+ }
+ .col1 li{
+  margin-right: 10px;
+ }
+ .col1 .rights{
+   margin-top: -10px;
+ }
+ .col2 li{
+     list-style: none;
+     font-family: serif;
+     font-size: 20px;
+ }
+ .flexpart2 .Address{
+  margin-top: 20px;
+   margin-left: -40px;
+ }
+ .Address p{
+  color: black;
+ }
+ .Address i{
+   color: white;
+ }
+
+ .col3 .flexpart3{
+    margin-top: 20px;
+    margin-left: -40px;
+    display :flex;
+ } 
+ .col3 li{
+      list-style: none;
+      margin-right: 20px; 
+
+ } 
+ .icon1 a{
+     color:#fff;
+ }
+ .icon1 a:hover{
+     color: #fff;
+ }
+ .Lasttitle{
+  color:black;
+ }
+ .col3 p{
+   color:black;
+   font-size: 20px;
+ }
+ /*.Address{
+   padding-left: 30px;
+ }*/
+ .Address .fa{
+   background-color: black;
+   width: 60px;
+   height: 60px;
+   padding-top: 2px;
+   border-radius:30px; 
+   text-align: center;
+ }
+ .Address .fa-envelope{
+   padding-top: 8px;
+ }
+ .icon1 .fa{
+   background-color: black;
+   width: 50px;
+   height: 50px;
+   padding-top: 10px;
+   border-radius:25px; 
+   text-align: center;
+ }
+ .flexpart1 a{
+   color:black;
+   cursor:pointer;
+   text-decoration: none;
+ }
+ .flexpart1 a:hover{
+   color:rgba(50,122,210,1);
+   cursor:pointer;
+   text-decoration: none;
+   
+ }
+ a:focus,a:active {
+  outline: none !important;
+  box-shadow: none !important;
+ }
+ .modal-body p{
+  font-family: arial !important;
+  font-size: 22px;
+ }
+ .modal {
+  overflow: hidden;
+ }
+ .modal-content{
+  /*height: auto !important;*/
+  height: calc(70vh) !important; 
+  border:2px solid #dedede !important;
+  border-radius: 0 !important;
+ }
+ .modal-content:hover{
+   box-shadow: 0 4px 10px 0px !important;
+   border: 4px solid rgba(50,122,210,1) !important;
+   border-radius: 0 !important;
+   -webkit-transition: all 0.3s ease !important;
+    transition: all 0.3s ease !important;
+ }
+ .modal-header{
+  position:sticky;
+  background-color: white;
+  /*box-shadow: 0px 2px 5px 0px;*/
+  flex-shrink: 0 !important;
+  border-radius: 0 !important;
+ }
+ .modal-body{
+  background-color: white; 
+  color:black;
+  overflow: scroll;
+  border-radius: 0px !important;
+ }
+ .modal-footer{
+ 	position: sticky;
+ 	background-color: white;
+ 	/*box-shadow: 0px 2px 5px 0px;*/
+ 	justify-content:center !important;
+  flex-shrink: 0 !important;
+  border-radius: 0px !important;
+ }
+ .modal-footer button{
+   height:40px;
+   width:100px;
+   font-family: arial !important;
+   cursor: pointer;
+ }
+ .modal-body ul{
+    list-style-type: disc;
+ }
+ .modal-body ol{
+  list-style-type: upper-roman;
+ }
+ 
