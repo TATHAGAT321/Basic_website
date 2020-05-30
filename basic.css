@@ -494,7 +494,6 @@ ul.price-points li i {
 }
 
 .layer5 .odd{
-  background-color: rgba(50,122,210,0.8);
 }
 .layer5 .even{
    background-color: white;
@@ -503,19 +502,32 @@ ul.price-points li i {
    width:20%;   
 }
 .layer5 th{
-  /*border:1px solid rgba(50,122,210,1);*/
-  color : rgba(50,122,210,1);
-  text-transform: uppercase;
+    text-transform: uppercase;
+    background: #2865d5;
+    color: white;
+    border-color: #4f7dd0 !important;
 }
 .layer5 table{
-  border: 2px solid rgba(50,122,210,1)!important;
+  border: 1px solid #e6e6e6;
   margin-top: 50px !important;
+    color: #333;
+    width: 100%;
+}
+
+.layer5 table th, .layer5 table td {
+    border: 1px solid #e6e6e6;
+    padding-top: 10px;
 }
 
 
- th.even{
-  background-color: white !important;
+ .layer5 table td.colhead{
+     font-size: 12px;
 }
+
+ .layer5 table td .icontableyes {
+     font-size: 16px;
+ }
+
  th.odd{
   background-color: white !important;
 }
@@ -525,7 +537,6 @@ ul.price-points li i {
 th.heading img{
   height:300px;
   width:100%;
-  border:2px solid #dedede;
 }
 
 .mar-t-50 {
