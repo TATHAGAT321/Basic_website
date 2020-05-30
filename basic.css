@@ -289,7 +289,7 @@ display: none;
 }
 
 .section {
-    padding: 75px 0;
+    padding: 50px 0;
 }
 
 .section-title{
@@ -373,6 +373,10 @@ display: none;
     min-height: 530px;
 }
 
+
+.layer4 .section {
+    padding-bottom: 25px;
+}
 
 .layer4 .card .price-title {
     display: -webkit-box;
@@ -525,6 +529,7 @@ ul.price-points li i {
 }
 
  .layer5 table td .icontableyes {
+     color: #327ad2;
      font-size: 16px;
  }
 
@@ -595,8 +600,10 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
 }
 
 .section-process {
-    background-color: #ffffff;
+    background-color: #f4f4f5;
 }
+
+
 
 .section-process .card-lists {
     margin-top: 30px;
@@ -652,44 +659,20 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
     overflow-y: auto;
 }
 
-.section-process .card-contact {
-    background-color: #327ad2;
-    color: white;
-}
-
-.section-process .card-contact .card-desc-title {
-    color: #94f9d7;
-    font-size: 28px;
-    text-transform: capitalize;
-}
-
-.section-process .card-contact .card-desc-text {
-    font-size: 19px;
-}
-
 
 /*col md*/
 
 /*col md*/
 @media (min-width: 768px) {
-    .card-contact {
-        display: none;
-    }
 
 }
 
 /*col lg*/
 @media (min-width: 992px) {
-    .card-contact {
-        display: none;
-    }
 }
 
 /*col-xl*/
 @media (min-width: 1200px) {
-    .card-contact {
-        display: none;
-    }
 
 }
  .layer6{
@@ -847,5 +830,19 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
  }
  .modal-body ol{
   list-style-type: upper-roman;
+ }
+
+ #pricing {
+     margin: 15px auto 0 !important;
+ }
+
+ #pricing .gst {
+     color: #073aae;
+     font-size: 15px;
+     font-weight: 600;
+     margin-top: 25px;
+     text-align: left !important;
+     width: 100%;
+     margin-left: 15px;
  }
  
