@@ -338,9 +338,9 @@ display: none;
   text-transform: uppercase;
     margin-top: 12px;
 }
-.price:hover{
-   /*box-shadow: 0px 6px 12.5px 0px;*/
-}
+/*.price:hover{
+   box-shadow: 0px 6px 12.5px 0px;
+}*/
 
 .price-plan {
     margin-top: 50px;
@@ -478,9 +478,8 @@ ul.price-points li i {
     background-color: #205dce;
 }
 
-/*#pricing.card h4,h5,h6,p{
-  color: white;
-}*/
+
+
 .layer4 .card:hover{
     box-shadow: 0 0 44px rgba(0, 0, 0, 0.15);
     border: 1px solid white;
@@ -492,6 +491,7 @@ ul.price-points li i {
 .layer4 .card:hover .offer {
     background-color: red;
 }
+
 
 .layer5 .odd{
   background-color: rgba(50,122,210,0.8);
@@ -793,9 +793,10 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
  }
  .modal-content{
   /*height: auto !important;*/
-  height: calc(70vh) !important; 
+  height: calc(60vh) !important; 
   border:2px solid #dedede !important;
   border-radius: 0 !important;
+  width:calc(60vh) !important;
  }
  .modal-content:hover{
    box-shadow: 0 4px 10px 0px !important;
