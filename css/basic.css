@@ -20,6 +20,96 @@ nav.header {
   .nav-link{
     color:black;
   }
+.modal-body .php-email-form {
+  width: 100%;
+  background: #fff;
+}
+
+.modal-body .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.modal-body .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.modal-body .php-email-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.modal-body .php-email-form .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.modal-body .php-email-form .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.modal-body .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.modal-body .php-email-form input{
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.modal-body .php-email-form input:focus {
+  border: 1px solid #327ad2 !important;
+ /* box-shadow:2px 0 5px 0px;*/
+}
+.modal-body .php-email-form input {
+  height: 44px;
+}
+
+.modal-body .php-email-form button[type="submit"] {
+  background: #327ad2;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.modal-body.php-email-form button[type="submit"]:hover {
+  background: #3ac162;
+}
+
+@-webkit-keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
   .bg-home-grad {
   background: transparent;
@@ -778,7 +868,7 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
   outline: none !important;
   box-shadow: none !important;
  }
- .modal-body p{
+ /*.modal-body p{
   font-family: arial !important;
   font-size: 22px;
  }
@@ -786,7 +876,7 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
   overflow: hidden;
  }
  .modal-content{
-  /*height: auto !important;*/
+  /*height: auto !important;
   height: calc(60vh) !important; 
   border:2px solid #dedede !important;
   border-radius: 0 !important;
@@ -802,7 +892,7 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
  .modal-header{
   position:sticky;
   background-color: white;
-  /*box-shadow: 0px 2px 5px 0px;*/
+  box-shadow: 0px 2px 5px 0px;
   flex-shrink: 0 !important;
   border-radius: 0 !important;
  }
@@ -816,10 +906,10 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
  	position: sticky;
  	background-color: white;
  	/*box-shadow: 0px 2px 5px 0px;*/
- 	justify-content:center !important;
+ 	/*justify-content:center !important;
   flex-shrink: 0 !important;
   border-radius: 0px !important;
- }
+ }*/
  .modal-footer button{
    height:40px;
    width:100px;
@@ -831,7 +921,7 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
  }
  .modal-body ol{
   list-style-type: upper-roman;
- }
+ }*/
 
  #pricing {
      margin: 15px auto 0 !important;
@@ -846,4 +936,5 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
      width: 100%;
      margin-left: 15px;
  }
+
  
