@@ -289,7 +289,7 @@ display: none;
 }
 
 .section {
-    padding: 75px 0;
+    padding: 50px 0;
 }
 
 .section-title{
@@ -373,6 +373,10 @@ display: none;
     min-height: 530px;
 }
 
+
+.layer4 .section {
+    padding-bottom: 25px;
+}
 
 .layer4 .card .price-title {
     display: -webkit-box;
@@ -494,7 +498,6 @@ ul.price-points li i {
 
 
 .layer5 .odd{
-  background-color: rgba(50,122,210,0.8);
 }
 .layer5 .even{
    background-color: white;
@@ -503,19 +506,33 @@ ul.price-points li i {
    width:20%;   
 }
 .layer5 th{
-  /*border:1px solid rgba(50,122,210,1);*/
-  color : rgba(50,122,210,1);
-  text-transform: uppercase;
+    text-transform: uppercase;
+    background: #2865d5;
+    color: white;
+    border-color: #4f7dd0 !important;
 }
 .layer5 table{
-  border: 2px solid rgba(50,122,210,1)!important;
+  border: 1px solid #e6e6e6;
   margin-top: 50px !important;
+    color: #333;
+    width: 100%;
+}
+
+.layer5 table th, .layer5 table td {
+    border: 1px solid #e6e6e6;
+    padding-top: 10px;
 }
 
 
- th.even{
-  background-color: white !important;
+ .layer5 table td.colhead{
+     font-size: 12px;
 }
+
+ .layer5 table td .icontableyes {
+     color: #333;
+     font-size: 16px;
+ }
+
  th.odd{
   background-color: white !important;
 }
@@ -525,7 +542,6 @@ ul.price-points li i {
 th.heading img{
   height:300px;
   width:100%;
-  border:2px solid #dedede;
 }
 
 .mar-t-50 {
@@ -584,8 +600,10 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
 }
 
 .section-process {
-    background-color: #ffffff;
+    background-color: #f4f4f5;
 }
+
+
 
 .section-process .card-lists {
     margin-top: 30px;
@@ -641,44 +659,20 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
     overflow-y: auto;
 }
 
-.section-process .card-contact {
-    background-color: #327ad2;
-    color: white;
-}
-
-.section-process .card-contact .card-desc-title {
-    color: #94f9d7;
-    font-size: 28px;
-    text-transform: capitalize;
-}
-
-.section-process .card-contact .card-desc-text {
-    font-size: 19px;
-}
-
 
 /*col md*/
 
 /*col md*/
 @media (min-width: 768px) {
-    .card-contact {
-        display: none;
-    }
 
 }
 
 /*col lg*/
 @media (min-width: 992px) {
-    .card-contact {
-        display: none;
-    }
 }
 
 /*col-xl*/
 @media (min-width: 1200px) {
-    .card-contact {
-        display: none;
-    }
 
 }
  .layer6{
@@ -837,5 +831,19 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
  }
  .modal-body ol{
   list-style-type: upper-roman;
+ }
+
+ #pricing {
+     margin: 15px auto 0 !important;
+ }
+
+ #pricing .gst {
+     color: #073aae;
+     font-size: 15px;
+     font-weight: 600;
+     margin-top: 25px;
+     text-align: left !important;
+     width: 100%;
+     margin-left: 15px;
  }
  
