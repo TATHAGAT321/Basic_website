@@ -36,6 +36,13 @@ nav.header {
   font-weight: 400;
   font-size: 13px;
 }
+.modal-body .php-email-form .validateprice {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
 
 .modal-body .php-email-form .error-message {
   display: none;

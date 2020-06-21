@@ -227,9 +227,10 @@
                        <li><i class="fa fa-check" aria-hidden="true"></i> Affordable Pricing</li>
                    </ul>
                    <div class="price-action">
-                       <button class="btn btn-rent">
+                       <a href=".price-query-model" data-toggle="modal" data-target=".price-query-model"><button class="btn btn-rent">
                            Rent Plan
-                       </button>
+                       </button></a>
+                       
                    </div>
                </div>
            </div>
@@ -265,9 +266,9 @@
                       <li><i class="fa fa-check" aria-hidden="true"></i> Affordable Pricing</li>
                   </ul>
                   <div class="price-action">
-                      <button class="btn btn-rent">
-                          Rent Plan
-                      </button>
+                      <a href=".price-query-model" data-toggle="modal" data-target=".price-query-model"><button class="btn btn-rent">
+                           Rent Plan
+                       </button></a>
                   </div>
               </div>
           </div>
@@ -304,10 +305,10 @@
                           <li><i class="fa fa-check" aria-hidden="true"></i> Affordable Pricing</li>
                       </ul>
                       <div class="price-action">
-                          <button class="btn btn-rent">
-                              Rent Plan
-                          </button>
-                      </div>
+                       <a  href=".price-query-model" data-toggle="modal" data-target=".price-query-model"><button class="btn btn-rent">
+                           Rent Plan
+                       </button></a>
+                       </div>
                   </div>
               </div>
               <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4  col-xs-12 price-plan">
@@ -343,9 +344,9 @@
                           <li><i class="fa fa-check" aria-hidden="true"></i> Affordable Pricing</li>
                       </ul>
                       <div class="price-action">
-                          <button class="btn btn-rent">
-                              Rent Plan
-                          </button>
+                          <a  href=".price-query-model" data-toggle="modal" data-target=".price-query-model"><button class="btn btn-rent">
+                           Rent Plan
+                       </button></a>
                       </div>
                   </div>
               </div>
@@ -381,9 +382,9 @@
                           <li><i class="fa fa-check" aria-hidden="true"></i> Affordable Pricing</li>
                       </ul>
                       <div class="price-action">
-                          <button class="btn btn-rent">
-                              Rent Plan
-                          </button>
+                          <a  href=".price-query-model" data-toggle="modal" data-target=".price-query-model"><button class="btn btn-rent">
+                           Rent Plan
+                       </button></a>
                       </div>
                   </div>
               </div>
@@ -419,9 +420,9 @@
                           <li><i class="fa fa-check" aria-hidden="true"></i> Affordable Pricing</li>
                       </ul>
                       <div class="price-action">
-                          <button class="btn btn-rent">
-                              Rent Plan
-                          </button>
+                         <a  href=".price-query-model" data-toggle="modal" data-target=".price-query-model"><button class="btn btn-rent">
+                           Rent Plan
+                       </button></a>
                       </div>
                   </div>
               </div>
@@ -981,7 +982,7 @@
               <div class="modal-content"> 
               <div class="modal-body">
                 <h2 class="text-center" style="padding:20px 0px 20px 0px; margin:-17px -17px 17px -17px; background:#327ad2; font-family:Lato; color: white;"> Contact Us </h2>
-              <form method="post" role="form" class="php-email-form">
+              <div method="post" role="form" class="php-email-form">
                   <div class="form-row">
                     <div class="col-md-6 form-group ">
                       <input type="text" autofocus name="first_name" class="form-control entry" id="first_name" placeholder="Enter your first name" minlength="2" data-msg="Please enter a valid first_name" oninvalid="setCustomValidity(' ')" required  />
@@ -1016,12 +1017,59 @@
                   <div class="text-center">
                     <button type="submit" id="submitit">Send</button>
                   </div>
-                </form>
+                </div>
               </div>
               </div>
               </div>
               </div> 
-      <script type="text/javascript" async="true">
+ <div class="modal fade price-query-model" id="exampleModal7" tabindex="-1" 
+              role="dialog" aria-labelledby="price-query-model" aria-hidden="true">
+              <div class="modal-dialog" role="document"> 
+              <div class="modal-content"> 
+              <div class="modal-body">
+                <h2 class="text-center" id = "pricetag" style="padding:20px 0px 20px 0px; margin:-17px -17px 17px -17px; background:#327ad2; font-family:Lato; color: white;"> Rent Plan </h2>
+              <div method="post" role="form" class="php-email-form">
+                  <div class="form-row">
+                    <div class="col-md-6 form-group ">
+                      <input type="text" autofocus name="first_name" class="form-control filterprice" id="first_name" placeholder="Enter your first name" minlength="2" data-msg="Please enter a valid first_name" oninvalid="setCustomValidity(' ')" required  />
+                      <div class="validateprice"></div>
+                    </div>
+                    <div class="col-md-6 form-group ">
+                      <input type="text" class="form-control filterprice" name="last_name" id="last_name" placeholder="Enter your last Name" minlength="2" data-msg="Please enter a valid last_name" oninvalid="setCustomValidity(' ')"required />
+                      <div class="validateprice"></div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-12 form-group ">
+                      <input type="email" class="form-control filterprice" name="email" id="email" placeholder="Enter your email-id" minlength="1" data-msg="Please enter a valid email" oninvalid="setCustomValidity(' ')" required pattern="[a-zA-Z0-9]*@gmail.com" />
+                    <div class="validateprice"></div>
+                  </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-2 col-md-2 form-group">
+                      <input type="text" class="form-control filterprice" name="country_code" id="country_code" placeholder="Enter your country code" value = "+91" minLength="2" oninvalid="setCustomValidity(' ')" required / >
+                      <div class="validateprice"></div>
+                    </div>
+                    <div class="col-10 col-md-10 form-group">
+                      <input type="tel" class="form-control filterprice" name="phone_no" id="phone" placeholder="Enter your Phone number" minlength="10" maxlength="10" data-msg="Please enter a valid Phone number" oninvalid="setCustomValidity(' ')" required />
+                      <div class="validateprice"></div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your Project has been Added. Thank you!</div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" id="dosubmit">Send</button>
+                  </div>
+                </div>
+              </div>
+              </div>
+              </div>
+              </div> 
+
+      <script>
       if ( window.history.replaceState ) {
          window.history.replaceState( null, null, window.location.href );
           }
