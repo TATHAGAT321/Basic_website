@@ -94,21 +94,60 @@ function getBaseSelectorMapping(additionalFields) {
 
 // call email api
 function call(payload) {
+  
+  let content = {
+    "Messages":[
+      {
+        "From": {
+          "Email": "admin@aquadecoro.com",
+          "Name": "Sintu"
+        },
+        "To": [
+          {
+            "Email": "tathagat812000@gmail.com",
+            "Name": "Tathagat"
+          }
+        ],
+        "Subject": "My first Mailjet email",
+        "TextPart": "Greetings from Mailjet.",
+        "HTMLPart": "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
+        "CustomID": "AppGettingStartedTest"
+      }
+  ]   
+};
 
+//   $.ajax({
+//     url: "https://reqres.in/api/users",
+//     type: "POST",
+//     data: {
+//         name: "paul rudd",
+//         movies: ["I Love You Man", "Role Models"]
+//     },
+//     success: function(response){
+//         console.log(response);
+//     }
+// })
+// }
 
   $.ajax({
-    url: "https://reqres.in/api/users",
-    type: "POST",
-    data: {
-        name: "paul rudd",
-        movies: ["I Love You Man", "Role Models"]
+    url: "https://api.mailjet.com/v3.1/send",
+    beforeSend: function(xhr) { 
+      xhr.setRequestHeader("Authorization", "Basic " + 
+        btoa("6878eedb06072dbe82464e584668a614:7d95b7ac300586bbe49559adbe465198")); 
     },
-    success: function(response){
-        console.log(response);
+    type: "POST",
+    datatype: 'json',
+    'Content-Type':'application/json',
+    data : JSON.stringify(content),
+    sucess: function(response){
+      console.log(response);
+    },
+    error: function(response){
+      console.log(response);
     }
-})
-}
+  });
 
+}
 // curl -s \
 // -X POST \
 // --user "6878eedb06072dbe82464e584668a614:7d95b7ac300586bbe49559adbe465198" \
@@ -172,6 +211,8 @@ function isValid(x,y) {
 $('#pr').click(function(e) {
   e.preventDefault();
 
+  console.log("here");
+
   call({
     "name" : "Tathagat",
     "nickname" : "Monu"
@@ -185,5 +226,3 @@ $('#pr').click(function(e) {
    setModalTitle();
    lisentModal();
 })();
-
-
