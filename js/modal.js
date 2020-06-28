@@ -97,23 +97,23 @@ function call(payload) {
   
   let content = {
     "Messages":[
-      {
-        "From": {
+    {
+      "From": {
+        "Email": "admin@aquadecoro.com",
+        "Name": "Sintu"
+      },
+      "To": [
+        {
           "Email": "admin@aquadecoro.com",
           "Name": "Sintu"
-        },
-        "To": [
-          {
-            "Email": "tathagat812000@gmail.com",
-            "Name": "Tathagat"
-          }
-        ],
-        "Subject": "My first Mailjet email",
-        "TextPart": "Greetings from Mailjet.",
-        "HTMLPart": "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
-        "CustomID": "AppGettingStartedTest"
-      }
-  ]   
+        }
+      ],
+      "Subject": "My first Mailjet email",
+      "TextPart": "Greetings from Mailjet.",
+      "HTMLPart": "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
+      "CustomID": "AppGettingStartedTest"
+    }
+  ]
 };
 
 //   $.ajax({
@@ -129,25 +129,23 @@ function call(payload) {
 // })
 // }
 
-  $.ajax({
-    url: "https://api.mailjet.com/v3.1/send",
-    beforeSend: function(xhr) { 
-      xhr.setRequestHeader("Authorization", "Basic " + 
-        btoa("6878eedb06072dbe82464e584668a614:7d95b7ac300586bbe49559adbe465198")); 
-    },
-    type: "POST",
-    datatype: 'json',
-    'Content-Type':'application/json',
-    data : JSON.stringify(content),
-    sucess: function(response){
-      console.log(response);
-    },
-    error: function(response){
-      console.log(response);
-    }
-  });
+var settings = {
+  "url": "https://api.mailjet.com/v3.1/send",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json",
+    "Authorization": "Basic Njg3OGVlZGIwNjA3MmRiZTgyNDY0ZTU4NDY2OGE2MTQ6N2Q5NWI3YWMzMDA1ODZiYmU0OTU1OWFkYmU0NjUxOTg="
+  },
+  "data": JSON.stringify({"Messages":[{"From":{"Email":"admin@aquadecoro.com","Name":"Sintu"},"To":[{"Email":"admin@aquadecoro.com","Name":"Sintu"}],"Subject":"My first Mailjet email","TextPart":"Greetings from Mailjet.","HTMLPart":"<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!","CustomID":"AppGettingStartedTest"}]}),
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 
 }
+// YXBpOjg4OWJlOTIyOGI0YzYxMDNlYzJhZjM2ZGY0NTQwMmI1LTQ2OGJkZTk3LWNmNWQ1Nzgw
 // curl -s \
 // -X POST \
 // --user "6878eedb06072dbe82464e584668a614:7d95b7ac300586bbe49559adbe465198" \
@@ -162,8 +160,8 @@ function call(payload) {
 //       },
 //       "To": [
 //         {
-//           "Email": "tathagat812000@gmail.com",
-//           "Name": "Tathagat"
+//           "Email": "admin@aquadecoro.com",
+//           "Name": "Sintu"
 //         }
 //       ],
 //       "Subject": "My first Mailjet email",
@@ -173,6 +171,8 @@ function call(payload) {
 //     }
 //   ]
 // }'
+
+
 /**
  Generic function for validation
 **/
