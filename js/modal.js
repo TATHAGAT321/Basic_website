@@ -95,6 +95,7 @@ function getBaseSelectorMapping(additionalFields) {
 // call email api
 function call(payload) {
 
+
   $.ajax({
     url: "https://reqres.in/api/users",
     type: "POST",
@@ -165,6 +166,7 @@ function isValid(x,y) {
       }
       return status;
 }
+
 
 
 $('#pr').click(function(e) {
