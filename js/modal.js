@@ -1,5 +1,4 @@
 let modalId = "#exampleModal6";
-
 sendEmail = function() {
   let payload = collectFormData(modalId);
   payload['price'] =  $(modalId+' #pricetag').text();
@@ -104,18 +103,19 @@ function call(payload) {
       },
       "To": [
         {
-          "Email": "admin@aquadecoro.com",
-          "Name": "Sintu"
+          "Email": "tathagat812000@gmail.com",
+          "Name": "Tathagat"
         }
       ],
       "Subject": "My first Mailjet email",
       "TextPart": "Greetings from Mailjet.",
-      "HTMLPart": "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
+      "HTMLPart": "<h3>Hello Aquadeco,</h3><br /><p> It is acknowldeged that your website is visited by a user in search of your esteemed service. you can catch him up at the address mentioned below.</p>" + JSON.stringify(payload),
       "CustomID": "AppGettingStartedTest"
     }
   ]
+   // $('infoobject').html(payload);
 };
-
+// $('infoobject').html(payload);
 //   $.ajax({
 //     url: "https://reqres.in/api/users",
 //     type: "POST",
@@ -137,7 +137,7 @@ var settings = {
     "Content-Type": "application/json",
     "Authorization": "Basic Njg3OGVlZGIwNjA3MmRiZTgyNDY0ZTU4NDY2OGE2MTQ6N2Q5NWI3YWMzMDA1ODZiYmU0OTU1OWFkYmU0NjUxOTg="
   },
-  "data": JSON.stringify({"Messages":[{"From":{"Email":"admin@aquadecoro.com","Name":"Sintu"},"To":[{"Email":"admin@aquadecoro.com","Name":"Sintu"}],"Subject":"My first Mailjet email","TextPart":"Greetings from Mailjet.","HTMLPart":"<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!","CustomID":"AppGettingStartedTest"}]}),
+  "data": JSON.stringify(content),
 };
 
 $.ajax(settings).done(function (response) {
@@ -226,3 +226,32 @@ $('#pr').click(function(e) {
    setModalTitle();
    lisentModal();
 })();
+
+
+// Drop down of plans
+
+$(document).ready(function(){
+    $("select").change(function(){
+        var selectedPlan = $(this).children("option:selected").val();
+        if( selectedPlan === "Basic")
+        {
+          $(".price-cost").children("strong").html("299");
+          $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 5 stages of Purification');
+        }
+        else if(selectedPlan === "Standard")
+        {
+          $(".price-cost").children("strong").html("399");
+          $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 7 stages of Purification');
+        }
+        else if(selectedPlan === "Premium")
+        {
+          $(".price-cost").children("strong").html("499");
+          $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 9 stages of Purification');
+        }
+        else
+        {
+          $(".price-cost").children("strong").html("299");
+          $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 5 stages of Purification');
+        }
+    });
+});

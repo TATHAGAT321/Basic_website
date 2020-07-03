@@ -944,4 +944,29 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
      margin-left: 15px;
  }
 
+//dropdown;
+.Plans {
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+}
+select {
+    color: #205dce !important;
+    padding: 10px !important;
+    margin-left:;
+    width: 250px;
+    text-align: center;
+    border: 2px solid #205dce !important;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top:50px !important;
+}
+
+select:hover {
+    transition: 0.4s;
+    color: white !important;
+    background-color: #205dce;
+}
+
  
