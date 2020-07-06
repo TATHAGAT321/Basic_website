@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-	   <title>Basic Page</title>
+	   <title>Aquadeco</title>
 		<meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -38,24 +38,37 @@
 </head>
 <body>
      <!--  Header    -->  
-	 <nav class="navbar sticky-top t navbar-expand-lg navbar-light bg-light  w-100 header">
-	    <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse"data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon navbar-dark"></span>
-	    </button>
-	    <a class="navbar-brand text-center" href="#">
-	    	<img src="images/Company.jpg" class="logo-image">
-	    </a>
-	    <div class="collapse navbar-collapse col-sm-12 col-med-12 col-lg-10" id="navbarTogglerDemo03">
-	        <ul class="nav justify-content-end col-sm-12 col-med-12 col-lg-12 w-100">
-			  <li class="nav-item">
-			    <a class="nav-link active" id="pr" style="color:black;text-decoration: none;">Product</a>
-			  </li>
-			 <li class="nav-item">  
-            <a class ="nav-link" href="#exampleModal6" data-toggle="modal" data-target="#exampleModal6" style="color:black;text-decoration: none;">Contact Us</a>
-        </li>
-	        </ul>
-	     </div>
-	 </nav>
+	 <nav class="navbar navbar-expand-lg navbar-light bg-light header">
+    <a class="navbar-brand" href="#"><img src="images/Company.jpg" class="logo-image"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" id="breadcrumb" aria-controls="navbarSupportedContent" aria-expanded="false">
+    <i class="fa fa-bars" aria-hidden="true" id="iconMenu"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content: flex-end;">
+    <div class="header-sm-hr" ></div>
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#section-2">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section-3">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section-4">Process</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section-5">Why Us</a>
+      </li>
+      <li class="nav-item">
+        <a class ="nav-link" href="#exampleModal6" data-toggle="modal" data-target="#exampleModal6" style="color:black;text-decoration: none;">Contact Us</a>
+      </li>
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  </div>
+</nav>
      <!-- Section-1 -->
      <center>
      <div id="GFG" class="carousel slide" data-ride="carousel" data-interval="5000"> 
@@ -145,7 +158,7 @@
 		 </div> 
          </center>
 	<!-- Section-2  -->
-	    <section class="">
+	    <section id="section-2">
         <div class="section section-grey">
             <h2 class="section-title text-dark-gray text-center">Prompt Ownership</h2>
         <div class="container row justify-content-center">
@@ -193,24 +206,22 @@
 
       <!-- Section-3 -->
     <!-- section-4 -->
-    <section class="layer4">
+    <section class="layer4" id="section-3">
 		<div class="section">
             <div class="section-subhead text-dark-grey text-center">
                 Flexible pricing for all customers
             </div>
             <h2 class="section-title text-dark-gray text-center">Pricing</h2>
-            <div class="container row">
-            <div class = "Plans col-sm-6 col-md-6 col-lg-4 col-xl-4  col-xs-12" id="Plan">
-            <select>
-            <option id="choice"> Choose Plan </option> 
-            <option id="choice1"> Basic </option>
-            <option id="choice2"> Standard </option>
-            <option id="choice3"> Premium </option>
-            </select>
-            </div>
-            </div>
+            <div class="container no-mar-pad">
+              <select class="pull-right" style="margin-right: 15px">
+               <option id="choice1"> Basic </option>
+               <option id="choice2"> Standard </option>
+               <option id="choice3"> Premium </option>
+              </select>
+          </div>
+        </div>
 		  <div class="container row justify-content-center" id="pricing">
-           <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4  col-xs-12 price-plan">
+           <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4  col-xs-12 price-plan no-mar-t">
                <div class="card" style="background-color: white;">
                    <div class="price-title">Monthly</div>
                    <div class="price-text">
@@ -220,7 +231,7 @@
                        <div class="price-cost">
                            <span><i class="fa fa-inr"
                                     aria-hidden="true"></i></span>
-                           <strong>299</strong>
+                           <strong>399</strong>
                        </div>
                        <div class="price-billing">
                            /mo <br> on 1 month plan
@@ -245,7 +256,7 @@
                    </div>
                </div>
            </div>
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4  col-xs-12 price-plan">
+              <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4  col-xs-12 price-plan no-mar-t">
               <div class="card">
                   <div class="offer">
                       <i class="fa fa-inr"
@@ -260,7 +271,7 @@
                       <div class="price-cost">
                            <span><i class="fa fa-inr"
                                     aria-hidden="true"></i></span>
-                          <strong>299</strong>
+                          <strong>399</strong>
                       </div>
                       <div class="price-billing">
                           /mo <br> on 3 month plan
@@ -284,7 +295,7 @@
                   </div>
               </div>
           </div>
-              <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4  col-xs-12 price-plan">
+              <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4  col-xs-12 price-plan no-mar-t">
                   <div class="card">
                       <div class="offer">
                           <i class="fa fa-inr"
@@ -299,7 +310,7 @@
                           <div class="price-cost">
                            <span><i class="fa fa-inr"
                                     aria-hidden="true"></i></span>
-                              <strong>299</strong>
+                              <strong>399</strong>
                           </div>
                           <div class="price-billing">
                               /mo <br> on 6 month plan
@@ -339,7 +350,7 @@
                           <div class="price-cost">
                            <span><i class="fa fa-inr"
                                     aria-hidden="true"></i></span>
-                              <strong>299</strong>
+                              <strong>399</strong>
                           </div>
                           <div class="price-billing">
                               /mo <br> on 9 month plan
@@ -378,7 +389,7 @@
                           <div class="price-cost">
                            <span><i class="fa fa-inr"
                                     aria-hidden="true"></i></span>
-                              <strong>299</strong>
+                              <strong>399</strong>
                           </div>
                           <div class="price-billing">
                               /mo <br> on 1 year plan
@@ -417,7 +428,7 @@
                           <div class="price-cost">
                            <span><i class="fa fa-inr"
                                     aria-hidden="true"></i></span>
-                              <strong>299</strong>
+                              <strong>399</strong>
                           </div>
                           <div class="price-billing">
                               /mo <br> on 2 year plan
@@ -447,7 +458,7 @@
 		  </div>
 
 	</section>
-        <section>
+        <section id="section-4">
             <div class="section section-grey section-process">
                 <h2 class="section-title text-dark-gray text-center">Filter Process Step</h2>
                 <div class="container row justify-content-center">
@@ -592,7 +603,7 @@
         </section>
 
         <!-- section-5  comaparisons-->
-	   <section class="layer5">
+	   <section class="layer5" id="section-5">
            <div class="section">
                <h2 class="section-title text-dark-gray text-center">Why Us</h2>
                <div class="container row justify-content-center">
@@ -1084,9 +1095,12 @@
               </div>
               </div>
               </div> 
+<!-- scroll-top-button -->
+    <div onclick="topFunction()" id="myBtn" title="Go to top"><a href="#GFG">
+      <i class="fa fa-caret-up" style="font-size:20px; margin-top: -20px; color:white;"></i></a></div>
 
       <script>
-      if ( window.history.replaceState ) {
+      if ( window.history.replaceState) {
          window.history.replaceState( null, null, window.location.href );
           }
       </script> 

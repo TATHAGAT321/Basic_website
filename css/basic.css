@@ -15,7 +15,7 @@ nav.header {
   	box-shadow:0px 2px 5px 0px rgba(0,0,0,.09);
     position: sticky ;
     top: 0px;  
-
+    z-index:9999;
   }
   .nav-link{
     color:black;
@@ -135,7 +135,7 @@ nav.header {
   	height: 50px;
   	vertical-align: middle;
   	margin-left: 10px;
-    opacity: 1;
+    /*opacity: 1;*/
     animation:example 6s 2s infinite;
   }
   /*@keyframes example{*/
@@ -756,12 +756,20 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
     overflow-y: auto;
 }
 
+.header-sm-hr {
+  display: none;
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+  margin: 10px 0;
+}
 
 /*col md*/
 
 /*col md*/
-@media (min-width: 768px) {
-
+@media (max-width: 900px) {
+  .header-sm-hr {
+    display: block;
+  }
 }
 
 /*col lg*/
@@ -944,29 +952,64 @@ box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
      margin-left: 15px;
  }
 
-//dropdown;
-.Plans {
-    text-align: center;
-    position: absolute;
-    bottom: 30px;
+/*dropdown*/
+.plans{
+  justify-content: right;
+  margin-top:10px !important;
+  /*margin-left:15px;
+  margin-right: 15px;*/
+
 }
 select {
     color: #205dce !important;
-    padding: 10px !important;
-    margin-left:;
-    width: 250px;
+    padding: 8px !important;
+    width: 200px;
     text-align: center;
     border: 2px solid #205dce !important;
     border-radius: 4px;
     font-weight: 700;
     font-size: 16px;
-    margin-top:50px !important;
 }
 
 select:hover {
     transition: 0.4s;
     color: white !important;
     background-color: #205dce;
+    border-color: #205dce;
+}
+
+/*// button hover*/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 35px;
+  height: 57px;
+  width:57px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  background-color:#0176ff;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 28.5px;
+  /*box-shadow: 1px 2px 2px 1px;*/
+  text-align: center;
+}
+
+#myBtn:hover {
+  /*color: dodgerblue;*/
+  color:blue;
+}
+
+.no-mar-pad {
+  margin: 0;
+  padding: 0
+}
+
+.no-mar-t {
+  margin-top: 0;
 }
 
  

@@ -235,12 +235,12 @@ $(document).ready(function(){
         var selectedPlan = $(this).children("option:selected").val();
         if( selectedPlan === "Basic")
         {
-          $(".price-cost").children("strong").html("299");
+          $(".price-cost").children("strong").html("399");
           $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 5 stages of Purification');
         }
         else if(selectedPlan === "Standard")
         {
-          $(".price-cost").children("strong").html("399");
+          $(".price-cost").children("strong").html("449");
           $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 7 stages of Purification');
         }
         else if(selectedPlan === "Premium")
@@ -248,10 +248,59 @@ $(document).ready(function(){
           $(".price-cost").children("strong").html("499");
           $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 9 stages of Purification');
         }
-        else
-        {
-          $(".price-cost").children("strong").html("299");
-          $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 5 stages of Purification');
-        }
     });
 });
+
+// smooth-scroll Property
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+// top scroll button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+$('#breadcrumb').click(function(e) {
+  e.preventDefault();
+  let currentClassAttr = $('#iconMenu').attr("class");
+  let newClassAttr = currentClassAttr == "fa fa-times" ? "fa fa-bars" : "fa fa-times"
+  $('#iconMenu').attr("class", newClassAttr);
+  $('#navbarSupportedContent').toggle("hide");
+});
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
