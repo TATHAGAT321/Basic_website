@@ -1,10 +1,9 @@
-.html,.body{
+/*html,body{
    height:100%;
    width:100%;
     color: #4c4c4c;
     background-color: #f8f9fb;
-}
-
+}*/
 body {
     font: 16px/1.2 brandon, Arial, Helvetica Neue, Helvetica, sans-serif;
 }
@@ -1011,5 +1010,9 @@ select:hover {
 .no-mar-t {
   margin-top: 0;
 }
+.close{
+  color:#fff !important;
+  opacity:1 !important;
+ }
 
- 
+.anchor { padding-top: 200px; }

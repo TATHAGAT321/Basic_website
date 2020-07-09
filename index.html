@@ -51,16 +51,16 @@
         <a class="nav-link" href="#section-2">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#section-3">Pricing</a>
+        <a class="nav-link anchor" href="#section-3" >Pricing</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#section-4">Process</a>
+        <a class="nav-link anchor" href="#section-4">Process</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#section-5">Why Us</a>
+        <a class="nav-link anchor" href="#section-5">Why Us</a>
       </li>
       <li class="nav-item">
-        <a class ="nav-link" href="#exampleModal6" data-toggle="modal" data-target="#exampleModal6" style="color:black;text-decoration: none;">Contact Us</a>
+        <a class ="nav-link " href="#exampleModal6" data-toggle="modal" data-target="#exampleModal6" style="color:black;text-decoration: none;">Contact Us</a>
       </li>
     </ul>
     <!-- <form class="form-inline my-2 my-lg-0">
@@ -71,15 +71,15 @@
 </nav>
      <!-- Section-1 -->
      <center>
-     <div id="GFG" class="carousel slide" data-ride="carousel" data-interval="5000"> 
+     <div id="section-1" class="carousel slide" data-ride="carousel" data-interval="5000"> 
       
     <!-- Indicators  -->
     <ol class="carousel-indicators"> 
-        <li id="one" data-target="#GFG" data-slide-to="0" class="active"></li> 
-        <li id="two" data-target="#GFG" data-slide-to="1"></li> 
-        <li id="three" data-target="#GFG" data-slide-to="2"></li> 
-        <li id="four" data-target="#GFG" data-slide-to="3"></li> 
-        <li id="five" data-target="#GFG" data-slide-to="4"></li>
+        <li id="one" data-target="#Section-1" data-slide-to="0" class="active"></li> 
+        <li id="two" data-target="#Section-1" data-slide-to="1"></li> 
+        <li id="three" data-target="#Section-1" data-slide-to="2"></li> 
+        <li id="four" data-target="#Section-1" data-slide-to="3"></li> 
+        <li id="five" data-target="#Section-1" data-slide-to="4"></li>
     </ol> 
         
     <!-- The slideshow  -->
@@ -149,10 +149,10 @@
 		        </div> 
 		    </div> 
 		        
-		      <a class="carousel-control-prev carousel-control" href="#GFG" data-slide="prev"> 
+		      <a class="carousel-control-prev carousel-control" href="#Section-1" data-slide="prev"> 
 		        <span id="icon1" class="carousel-control-prev-icon"></span> 
 		      </a> 
-		      <a class="carousel-control-next carousel-control" href="#GFG" data-slide="next"> 
+		      <a class="carousel-control-next carousel-control" href="#Section-1" data-slide="next"> 
 		        <span id="icon2" class="carousel-control-next-icon"></span> 
 		      </a> 
 		 </div> 
@@ -324,7 +324,7 @@
                       <div class="price-decor"></div>
                       <ul class="price-points">
                           <li><i class="fa fa-check" aria-hidden="true"></i> 7 Day Free Trial </li>
-                          <li><i class="fa fa-check" aria-hidden="true"></i> Pause Subscription <sup>*</sup></li>
+                          <!-- <li><i class="fa fa-check" aria-hidden="true"></i> Pause Subscription <sup>*</sup></li> -->
                           <li><i class="fa fa-check" aria-hidden="true"></i> Affordable Pricing</li>
                           <li class="stages"><i class="fa fa-check" aria-hidden="true"></i>5 Stage Purification</li>
                       </ul>
@@ -994,21 +994,16 @@
                 </div>
                 </div>
                 </div>
-              
-
-
- 
-
-
 
 
 
  <div class="modal fade exampleModal6" id="exampleModal6" tabindex="-1" 
-              role="dialog" aria-labelledby="exampleModal6" aria-hidden="true">
+              role="dialog" aria-labelledby="exampleModal6" aria-hidden="true" style = "z-index: 99999; position: fixed;">
               <div class="modal-dialog" role="document"> 
               <div class="modal-content"> 
               <div class="modal-body">
-                <h2 class="text-center" style="padding:20px 0px 20px 0px; margin:-17px -17px 17px -17px; background:#327ad2; font-family:Lato; color: white;"> Contact Us </h2>
+                <h2 class="text-center" style="padding:20px 0px 20px 0px; margin:-17px -17px 17px -17px; background:#327ad2; font-family:Lato; color: white;"> Contact Us <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style=" padding-right: 20px;">&times;</span>
+               </button></h2>
               <div method="post" role="form" class="php-email-form">
                   <div class="form-row">
                     <div class="col-md-6 form-group ">
@@ -1050,11 +1045,11 @@
               </div>
               </div> 
  <div class="modal fade price-query-model" id="exampleModal7" tabindex="-1" 
-              role="dialog" aria-labelledby="price-query-model" aria-hidden="true">
+              role="dialog" aria-labelledby="price-query-model" aria-hidden="true"  style = "z-index: 99999; position: fixed;">
               <div class="modal-dialog" role="document"> 
               <div class="modal-content"> 
               <div class="modal-body">
-                <h2 class="text-center" id = "pricetag" style="padding:20px 0px 20px 0px; margin:-17px -17px 17px -17px; background:#327ad2; font-family:Lato; color: white;"> Rent Plan </h2>
+                <h2 class="text-center" id = "pricetag" style="padding:20px 0px 20px 0px; margin:-17px -17px 17px -17px; background:#327ad2; font-family:Lato; color: white;"> Rent Plan</h2>
               <div method="post" role="form" class="php-email-form">
                   <div class="form-row">
                     <div class="col-md-6 form-group ">
@@ -1096,8 +1091,10 @@
               </div>
               </div> 
 <!-- scroll-top-button -->
-    <div onclick="topFunction()" id="myBtn" title="Go to top"><a href="#GFG">
-      <i class="fa fa-caret-up" style="font-size:20px; margin-top: -20px; color:white;"></i></a></div>
+   <div onclick="topFunction()" id="myBtn" >
+     <a href="#section-1"> <i class="fa fa-caret-up" style="font-size:20px; margin-top: -20px; color:white;"></i></a>
+    </div>
+  </a>
 
       <script>
       if ( window.history.replaceState) {

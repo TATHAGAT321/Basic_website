@@ -51,7 +51,7 @@ setModalTitle = function() {
     let title = $(this).parent().find('.price-title') ? 
                 $(this).parent().find('.price-title').text() : "Contact us";
 
-     $('#pricetag').text(title);
+     $('#pricetag').html(title + '<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff !important; opacity:1;"><span aria-hidden="true" style="padding-right:20px;">&times;</span></button>');
   });
 };
 
@@ -268,7 +268,7 @@ $(document).ready(function(){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 1000, function(){
+      }, 800, function(){
    
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
@@ -284,8 +284,9 @@ var mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (document.body.scrollTop > 365 || document.documentElement.scrollTop > 365) {
     mybutton.style.display = "block";
+    console.log(document.documentElement.scrollTop);
   } else {
     mybutton.style.display = "none";
   }
