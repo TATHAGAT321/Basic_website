@@ -103,7 +103,7 @@ function call(payload) {
       },
       "To": [
         {
-          "Email": "tathagat812000@gmail.com",
+          "Email": "admin@aquadecoro.com",
           "Name": "Tathagat"
         }
       ],
