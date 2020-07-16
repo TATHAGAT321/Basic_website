@@ -1,9 +1,15 @@
+//local
+let apiBaseUrl = "http://127.0.0.1:5000"
+
+// remote
+// let apiBaseUrl = "http://127.0.0.1:5000"
+
 let modalId = "#exampleModal6";
 sendEmail = function() {
   let payload = collectFormData(modalId);
   payload['price'] =  $(modalId+' #pricetag').text();
   console.log(payload);
-  call(payload);
+  call(payload); 
 }
 
 
@@ -93,27 +99,40 @@ function getBaseSelectorMapping(additionalFields) {
 
 // call email api
 function call(payload) {
-  
+  let type;
+  if(payload.price == "")
+  {
+        type = "Contact"
+  }
+  else
+  {
+     type : "plan-" + payload.price;
+  }
   let content = {
-    "Messages":[
-    {
-      "From": {
-        "Email": "admin@aquadecoro.com",
-        "Name": "Sintu"
-      },
-      "To": [
-        {
-          "Email": "admin@aquadecoro.com",
-          "Name": "Tathagat"
-        }
-      ],
-      "Subject": "My first Mailjet email",
-      "TextPart": "Greetings from Mailjet.",
-      "HTMLPart": "<h3>Hello Aquadeco,</h3><br /><p> It is acknowldeged that your website is visited by a user in search of your esteemed service. you can catch him up at the address mentioned below.</p>" + JSON.stringify(payload),
-      "CustomID": "AppGettingStartedTest"
-    }
-  ]
+  //   "Messages":[
+  //   {
+  //     "From": {
+  //       "Email": "admin@aquadecoro.com",
+  //       "Name": "Sintu"
+  //     },
+  //     "To": [
+  //       {
+  //         "Email": "admin@aquadecoro.com",
+  //         "Name": "Tathagat"
+  //       }
+  //     ],
+  //     "Subject": "My first Mailjet email",
+  //     "TextPart": "Greetings from Mailjet.",
+  //     "HTMLPart": "<h3>Hello Aquadeco,</h3><br /><p> It is acknowldeged that your website is visited by a user in search of your esteemed service. you can catch him up at the address mentioned below.</p>" + JSON.stringify(payload),
+  //     "CustomID": "AppGettingStartedTest"
+  //   }
+  // ]
    // $('infoobject').html(payload);
+       "name" : payload.firstName + payload.lastName,
+       "email" : payload.email,
+       "phone" : payload.phone,
+       "type" : "ok"
+       
 };
 // $('infoobject').html(payload);
 //   $.ajax({
@@ -130,14 +149,16 @@ function call(payload) {
 // }
 
 var settings = {
-  "url": "https://api.mailjet.com/v3.1/send",
+  "url": apiBaseUrl+"/contact",
   "method": "POST",
-  "timeout": 0,
+
+  // "timeout": 0,
   "headers": {
     "Content-Type": "application/json",
     "Authorization": "Basic Njg3OGVlZGIwNjA3MmRiZTgyNDY0ZTU4NDY2OGE2MTQ6N2Q5NWI3YWMzMDA1ODZiYmU0OTU1OWFkYmU0NjUxOTg="
   },
   "data": JSON.stringify(content),
+  "dataType": "JSON"
 };
 
 $.ajax(settings).done(function (response) {
@@ -286,7 +307,6 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 365 || document.documentElement.scrollTop > 365) {
     mybutton.style.display = "block";
-    console.log(document.documentElement.scrollTop);
   } else {
     mybutton.style.display = "none";
   }
