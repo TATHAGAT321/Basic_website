@@ -1,7 +1,7 @@
-//local
-let apiBaseUrl = "http://127.0.0.1:5000"
+//remote
+let apiBaseUrl = "https://flaskp-email.herokuapp.com";
 
-// remote
+// local
 // let apiBaseUrl = "http://127.0.0.1:5000"
 
 let modalId = "#exampleModal6";
@@ -27,26 +27,27 @@ submitContact = function(){
 
     // send mail
     sendEmail();
-
-  })
+  });
 }
 
 // validate price query
-submitPriceQuery = function(){
+submitPriceQuery = function(event){
   
   // check valdation
   $('#dosubmit').click(function(event){
+    // event.preventDefault();
     let priceSelector = $('.validateprice');
     let validatorSelector = $(".form-control.filterprice");
     if(!isValid(priceSelector,validatorSelector)) {
       console.error("validation failed");
       return false;
     };
-
     // send email
     sendEmail();
-
-  })
+    $('#exampleModal7').modal('hide');
+    // alert("Thank you for contacting us!!");
+    
+  });
 }
 
 // set modal title dynamically
@@ -57,12 +58,11 @@ setModalTitle = function() {
     let title = $(this).parent().find('.price-title') ? 
                 $(this).parent().find('.price-title').text() : "Contact us";
 
-     $('#pricetag').html(title + '<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color:#fff !important; opacity:1;"><span aria-hidden="true" style="padding-right:20px;">&times;</span></button>');
+     $('#pricetag').html(title + '<button type="button" class="close" id = "closebutton" data-dismiss="modal" aria-label="Close" style="color:#fff !important; opacity:1;"><span aria-hidden="true" style="padding-right:20px;">&times;</span></button>');
   });
-};
+}
 
 lisentModal = function() {
-  console.log("inside")
  $('.modal').on('shown.bs.modal', function(){
     modalId = "#"+ ($(this).attr('id'));
     console.log(modalId)
@@ -99,54 +99,24 @@ function getBaseSelectorMapping(additionalFields) {
 
 // call email api
 function call(payload) {
-  let type;
-  if(payload.price == "")
+  let type="";
+  if(payload.price === "")
   {
-        type = "Contact"
+        type = "Contact";
   }
   else
   {
-     type : "plan-" + payload.price;
+     type = "plan-" + payload.price;
   }
+
   let content = {
-  //   "Messages":[
-  //   {
-  //     "From": {
-  //       "Email": "admin@aquadecoro.com",
-  //       "Name": "Sintu"
-  //     },
-  //     "To": [
-  //       {
-  //         "Email": "admin@aquadecoro.com",
-  //         "Name": "Tathagat"
-  //       }
-  //     ],
-  //     "Subject": "My first Mailjet email",
-  //     "TextPart": "Greetings from Mailjet.",
-  //     "HTMLPart": "<h3>Hello Aquadeco,</h3><br /><p> It is acknowldeged that your website is visited by a user in search of your esteemed service. you can catch him up at the address mentioned below.</p>" + JSON.stringify(payload),
-  //     "CustomID": "AppGettingStartedTest"
-  //   }
-  // ]
-   // $('infoobject').html(payload);
        "name" : payload.firstName + payload.lastName,
        "email" : payload.email,
        "phone" : payload.phone,
-       "type" : "ok"
+       "type"  : type,
        
 };
-// $('infoobject').html(payload);
-//   $.ajax({
-//     url: "https://reqres.in/api/users",
-//     type: "POST",
-//     data: {
-//         name: "paul rudd",
-//         movies: ["I Love You Man", "Role Models"]
-//     },
-//     success: function(response){
-//         console.log(response);
-//     }
-// })
-// }
+// console.log(content.type);
 
 var settings = {
   "url": apiBaseUrl+"/contact",
@@ -162,37 +132,11 @@ var settings = {
 };
 
 $.ajax(settings).done(function (response) {
-  console.log(response);
+  // console.log(response);
+  alert(" Sucess!Thank you for contacting us!!");
 });
 
 }
-// YXBpOjg4OWJlOTIyOGI0YzYxMDNlYzJhZjM2ZGY0NTQwMmI1LTQ2OGJkZTk3LWNmNWQ1Nzgw
-// curl -s \
-// -X POST \
-// --user "6878eedb06072dbe82464e584668a614:7d95b7ac300586bbe49559adbe465198" \
-// https://api.mailjet.com/v3.1/send \
-// -H 'Content-Type: application/json' \
-// -d '{
-//   "Messages":[
-//     {
-//       "From": {
-//         "Email": "admin@aquadecoro.com",
-//         "Name": "Sintu"
-//       },
-//       "To": [
-//         {
-//           "Email": "admin@aquadecoro.com",
-//           "Name": "Sintu"
-//         }
-//       ],
-//       "Subject": "My first Mailjet email",
-//       "TextPart": "Greetings from Mailjet.",
-//       "HTMLPart": "<h3>Dear passenger 1, welcome to <a href='https://www.mailjet.com/'>Mailjet</a>!</h3><br />May the delivery force be with you!",
-//       "CustomID": "AppGettingStartedTest"
-//     }
-//   ]
-// }'
-
 
 /**
  Generic function for validation
@@ -246,6 +190,7 @@ $('#pr').click(function(e) {
    submitPriceQuery();
    setModalTitle();
    lisentModal();
+   // refreshFunction();
 })();
 
 
@@ -325,3 +270,14 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// $('#closebutton').click(function(e){
+//   $('#exampleModal7').on('hidden.bs.modal', function () {
+//           location.reload();
+//     });
+
+// });
+$('#exampleModal7').on('hidden.bs.modal', function () {
+       setTimeout(function()
+       {location.reload();} ,1000);
+  }); 

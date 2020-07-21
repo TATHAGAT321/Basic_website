@@ -979,20 +979,22 @@ select:hover {
 
 /*// button hover*/
 #myBtn {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 100px;
   right: 35px;
-  height: 57px;
-  width:57px;
+  left:auto;
+  top:auto;
+  height: 52px;
+  width:52px;
   z-index: 99;
   font-size: 18px;
   border: none;
   background-color:#0176ff;
   outline: none;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 28.5px;
+  padding: 13px;
+  border-radius: 26px;
   /*box-shadow: 1px 2px 2px 1px;*/
   text-align: center;
 }
@@ -1004,7 +1006,7 @@ select:hover {
 
 .no-mar-pad {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .no-mar-t {
@@ -1016,3 +1018,12 @@ select:hover {
  }
 
 .anchor { padding-top: 200px; }
+
+@media only screen and (min-width: 600px){
+
+.section {
+    padding : 90px 0px 30px 0px !important;
+    /*margin: 0px;*/
+}
+
+}
