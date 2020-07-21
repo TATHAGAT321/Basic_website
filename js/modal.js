@@ -27,6 +27,8 @@ submitContact = function(){
 
     // send mail
     sendEmail();
+    $('#exampleModal6').modal('hide');
+    // alert("Thank you for contacting us!!");
   });
 }
 
@@ -132,8 +134,8 @@ var settings = {
 };
 
 $.ajax(settings).done(function (response) {
-  // console.log(response);
-  alert(" Sucess!Thank you for contacting us!!");
+  console.log(response);
+  
 });
 
 }
@@ -279,5 +281,10 @@ function topFunction() {
 // });
 $('#exampleModal7').on('hidden.bs.modal', function () {
        setTimeout(function()
-       {location.reload();} ,1000);
+       {location.reload();alert(" Sucess!Thank you for contacting us!!");} ,1000);
   }); 
+$('#exampleModal6').on('hidden.bs.modal', function () {
+       setTimeout(function()
+       {location.reload();alert(" Sucess!Thank you for contacting us!!");} ,1000);
+  }); 
+
