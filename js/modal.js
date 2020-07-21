@@ -28,6 +28,8 @@ submitContact = function(){
     // send mail
     sendEmail();
     $('#exampleModal6').modal('hide');
+    setTimeout( function(){
+      alert(" Sucess!Thank you for contacting us!!");},500);
     // alert("Thank you for contacting us!!");
   });
 }
@@ -37,7 +39,7 @@ submitPriceQuery = function(event){
   
   // check valdation
   $('#dosubmit').click(function(event){
-    // event.preventDefault();
+    event.preventDefault();
     let priceSelector = $('.validateprice');
     let validatorSelector = $(".form-control.filterprice");
     if(!isValid(priceSelector,validatorSelector)) {
@@ -47,6 +49,8 @@ submitPriceQuery = function(event){
     // send email
     sendEmail();
     $('#exampleModal7').modal('hide');
+    setTimeout( function(){
+      alert(" Sucess!Thank you for contacting us!!");},500);
     // alert("Thank you for contacting us!!");
     
   });
@@ -88,7 +92,8 @@ function getBaseSelectorMapping(additionalFields) {
     'firstName' : "#first_name",    
     'lastName' : "#last_name",
     'email' : "#email",
-    'phone' : "#phone"
+    'phone' : "#phone",
+    'message': "#message",
   };
 
   if(additionalFields && Object.keys(additionalFields).length
@@ -112,9 +117,10 @@ function call(payload) {
   }
 
   let content = {
-       "name" : payload.firstName + payload.lastName,
+       "name" : payload.firstName + " " + payload.lastName,
        "email" : payload.email,
        "phone" : payload.phone,
+       "message" : payload.message,
        "type"  : type,
        
 };
@@ -281,10 +287,10 @@ function topFunction() {
 // });
 $('#exampleModal7').on('hidden.bs.modal', function () {
        setTimeout(function()
-       {location.reload();alert(" Sucess!Thank you for contacting us!!");} ,1000);
+       {location.reload();} ,1000);
   }); 
 $('#exampleModal6').on('hidden.bs.modal', function () {
        setTimeout(function()
-       {location.reload();alert(" Sucess!Thank you for contacting us!!");} ,1000);
+       {location.reload();} ,1000);
   }); 
 
