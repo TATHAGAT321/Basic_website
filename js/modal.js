@@ -1,8 +1,8 @@
 //remote
-let apiBaseUrl = "https://flaskp-email.herokuapp.com";
+// let apiBaseUrl = "https://flaskp-email.herokuapp.com";
 
 // local
-// let apiBaseUrl = "http://127.0.0.1:5000"
+let apiBaseUrl = "http://127.0.0.1:5000"
 
 let modalId = "#exampleModal6";
 sendEmail = function() {
@@ -136,7 +136,8 @@ var settings = {
     "Authorization": "Basic Njg3OGVlZGIwNjA3MmRiZTgyNDY0ZTU4NDY2OGE2MTQ6N2Q5NWI3YWMzMDA1ODZiYmU0OTU1OWFkYmU0NjUxOTg="
   },
   "data": JSON.stringify(content),
-  "dataType": "JSON"
+  "dataType": "JSON",
+  crossDomain: true,
 };
 
 $.ajax(settings).done(function (response) {
@@ -285,12 +286,28 @@ function topFunction() {
 //     });
 
 // });
-$('#exampleModal7').on('hidden.bs.modal', function () {
-       setTimeout(function()
-       {location.reload();} ,1000);
-  }); 
-$('#exampleModal6').on('hidden.bs.modal', function () {
-       setTimeout(function()
-       {location.reload();} ,1000);
-  }); 
+// $('#exampleModal7').on('hidden.bs.modal', function () {
+//        setTimeout(function()
+//        {location.reload();} ,1000);
+//   }); 
+// $('#exampleModal6').on('hidden.bs.modal', function () {
+//        setTimeout(function()
+//        {location.reload();} ,1000);
+//   }); 
+
+$(function(){
+    // Remove the # from the hash, as different browsers may or may not include it
+    var hash = location.hash.replace('#','');
+
+    if(hash != ''){
+        // Show the hash if it's set
+        // alert(hash);
+
+        // Clear the hash in the URL
+        location.hash = '';
+    }
+});
+$(document).bind("hashchange", function(){
+    // Anchor has changed.
+});
 
