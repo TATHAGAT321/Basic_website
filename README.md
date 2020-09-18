@@ -1,2 +1,2 @@
 # Basic_website
-This is a Water purifier's  company basic website having a single page only.
+This is a Water purifier's company basic website having a single page only.This websites features an attractive UI for customers of the company.In this website all user’s query  are sent to the admin email via email api used .This website integrated various form and a messaging features for users to send their query to the comapny and choose various offers and plan available. It also include client side and server side authentication for various forms available on the website for users. 
