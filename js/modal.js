@@ -2,6 +2,7 @@
 // let apiBaseUrl = "https://flaskp-email.herokuapp.com";
 
 // local
+// let app = 
 let apiBaseUrl = "http://127.0.0.1:5000"
 
 let modalId = "#exampleModal6";
@@ -131,7 +132,7 @@ var settings = {
   "method": "POST",
 
   // "timeout": 0,
-  "headers": {
+  "headers": { 
     "Content-Type": "application/json",
     "Authorization": "Basic Njg3OGVlZGIwNjA3MmRiZTgyNDY0ZTU4NDY2OGE2MTQ6N2Q5NWI3YWMzMDA1ODZiYmU0OTU1OWFkYmU0NjUxOTg="
   },
@@ -243,7 +244,7 @@ $(document).ready(function(){
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 800, function(){
+      },800, function(){
    
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
@@ -275,10 +276,10 @@ $('#breadcrumb').click(function(e) {
 });
 
 // When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+// function topFunction() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
 
 // $('#closebutton').click(function(e){
 //   $('#exampleModal7').on('hidden.bs.modal', function () {
@@ -310,4 +311,62 @@ $(function(){
 $(document).bind("hashchange", function(){
     // Anchor has changed.
 });
+
+
+
+
+
+// middileware 
+
+app.use(function(req,res, next){
+// inside route 
+
+if(!req.session || !req.session.user) {
+   res.redirect('308', '/login');
+}
+
+res.redirect('/home');
+
+// what is permanenet redirect, temp redirect, what code you should use 
+// while redirecting to this 
+
+
+app.get("/login", function() {
+  res.render("login"); 
+});
+
+app.post("/login", function() {
+  let error = "server eroor";
+  // validate and format input
+  let input  = validator.getUserCredntials(req);
+  let response = DbService.checkUser(input);
+
+  if(response == null) {
+    res.render("login", {"error" : "username or password is wrong"});
+    return false;
+  }
+
+  req.session.user = response;
+
+  res.redirect("/home");
+
+})
+
+
+app.get("/home", function() {
+
+  if(!req.session && !req.session.user) {
+    // redirect login
+  }
+
+  let response = DbService.fetchUser(req.session.user.id);
+  response = Util.formatUserResponse(z)
+
+  res.render("home", )
+
+});
+
+
+})
+
 
