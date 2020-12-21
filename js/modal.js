@@ -209,17 +209,17 @@ $('#pr').click(function(e) {
 $(document).ready(function(){
     $("select").change(function(){
         var selectedPlan = $(this).children("option:selected").val();
-        if( selectedPlan === "Basic")
+        if( selectedPlan === "GRAND")
         {
-          $(".price-cost").children("strong").html("399");
+          $(".price-cost").children("strong").html("299");
           $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 5 stages of Purification');
         }
-        else if(selectedPlan === "Standard")
+        else if(selectedPlan === "SUPREME")
         {
-          $(".price-cost").children("strong").html("449");
+          $(".price-cost").children("strong").html("399");
           $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 7 stages of Purification');
         }
-        else if(selectedPlan === "Premium")
+        else if(selectedPlan === "PREMIUM")
         {
           $(".price-cost").children("strong").html("499");
           $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 9 stages of Purification');
