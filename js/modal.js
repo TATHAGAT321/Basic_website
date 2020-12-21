@@ -214,12 +214,12 @@ $(document).ready(function(){
           $(".price-cost").children("strong").html("299");
           $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 5 stages of Purification');
         }
-        else if(selectedPlan === "SUPREME")
+        else if(selectedPlan === "PREMIUM")
         {
           $(".price-cost").children("strong").html("399");
           $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 7 stages of Purification');
         }
-        else if(selectedPlan === "PREMIUM")
+        else if(selectedPlan === "SUPREME")
         {
           $(".price-cost").children("strong").html("499");
           $(".price-points").children("li.stages").html('<i class="fa fa-check" aria-hidden="true"></i> 9 stages of Purification');
